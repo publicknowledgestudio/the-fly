@@ -1,0 +1,20 @@
+{
+  "model": "recraft/v4/style/text-to-image",
+  "input": {
+    "style_id": "4c71ef1b-272a-4ef3-b3a4-db6d697fba8c",
+    "image_size": "landscape_16_9",
+    "prompt": "Hand-painted comic sound-effect lettering reading exactly \"BZZZZZZ\", centred with wide empty margins so every letter is fully visible. Each letter a different size and tilt, bouncing up and down along a wavy line like a buzzing fly's flight path, thick rough deep-plum gouache brush strokes with dry-brush edges, a few tiny motion ticks around the letters. Plain pale off-white paper background, nothing else in the image.",
+    "colors": [
+      {
+        "r": 58,
+        "g": 30,
+        "b": 63
+      }
+    ]
+  },
+  "requestId": "01a0c2ce-05a5-7443-89d5-be168c74136b",
+  "files": [
+    "assets/stylesheet/lettering-bzz-recraft-v2.webp"
+  ],
+  "ms": 16625
+}

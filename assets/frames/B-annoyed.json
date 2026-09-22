@@ -1,0 +1,21 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "Edit the FIRST image. The person's head is level and they look straight at the viewer, openly annoyed: brows pulled low and angled inward, lids tense, jaw set, nostrils slightly flared. Keep everything else exactly the same and pixel-aligned: the camera, the framing, the background, the lighting, the colours and the oil-pastel brush texture. Same person, on-model. No text. The SECOND image is the character model sheet, for reference only.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab49fe/fXiisQ9HhAUEp9Jf9msAm_1789977579694.png",
+      "https://v3b.fal.media/files/b/0aab49ff/eYKng2UTvBBr6UijuaoW-_1789977598451.png"
+    ],
+    "image_size": {
+      "width": 2048,
+      "height": 1152
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c2fb-3990-7c10-97dd-16eca91b9cfc",
+  "files": [
+    "assets/frames/B-annoyed.png"
+  ],
+  "ms": 93367
+}

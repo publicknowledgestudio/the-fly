@@ -1,0 +1,25 @@
+{
+  "model": "recraft/v4/style/text-to-image",
+  "input": {
+    "style_id": "4c71ef1b-272a-4ef3-b3a4-db6d697fba8c",
+    "background_color": {
+      "r": 245,
+      "g": 241,
+      "b": 232
+    },
+    "image_size": "landscape_16_9",
+    "prompt": "Hand-painted sound-effect lettering reading exactly \"BZZZZZZZZ\" — wobbly, vibrating, uneven brush letters in deep plum gouache with dry-brush edges, letters jittering up and down like a buzzing sound, on plain off-white paper. Nothing else in the image.",
+    "colors": [
+      {
+        "r": 58,
+        "g": 30,
+        "b": 63
+      }
+    ]
+  },
+  "requestId": "01a0c2cb-43ae-75d3-8ef8-bf14d3fdfab9",
+  "files": [
+    "assets/stylesheet/lettering-bzz-recraft.webp"
+  ],
+  "ms": 36358
+}

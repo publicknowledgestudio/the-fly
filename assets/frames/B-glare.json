@@ -1,0 +1,21 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "Edit the FIRST image. The person's head is level and they stare straight into the camera with a flat, exhausted, hateful deadpan glare: lids half lowered over the pupils, brows flat and low, mouth a thin line. Keep everything else exactly the same and pixel-aligned: the camera, the framing, the background, the lighting, the colours and the oil-pastel brush texture. Same person, on-model. No text. The SECOND image is the character model sheet, for reference only.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab49fe/IVJbbOwp7PxVHxvSbiP6J_1789977579693.png",
+      "https://v3b.fal.media/files/b/0aab49ff/tuTXPjck9EgJE_YXGlmuy_1789977597441.png"
+    ],
+    "image_size": {
+      "width": 2048,
+      "height": 1152
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c2fb-3809-7143-950b-31ed1db50300",
+  "files": [
+    "assets/frames/B-glare.png"
+  ],
+  "ms": 91272
+}

@@ -1,0 +1,21 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "Edit the FIRST image. The person's right hand has lifted off the keyboard and sweeps across in front of the laptop screen in a quick shooing wave — fingers spread, palm facing left, with a short dry-brush motion smear behind it. The screen stays blank dark plum. Keep everything else exactly the same and pixel-aligned: the camera, the framing, the background, the lighting, the colours and the oil-pastel brush texture. Same person, on-model. No text. The SECOND image is the character model sheet, for reference only.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab49fe/u8L0js-X6bOjcpNfXaD0X_1789977579701.png",
+      "https://v3b.fal.media/files/b/0aab49ff/lvbypYZF94DWKZRRFb-dK_1789977597297.png"
+    ],
+    "image_size": {
+      "width": 2048,
+      "height": 1152
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c2fb-3732-7e23-8605-39e75a658f6a",
+  "files": [
+    "assets/frames/C-wave.png"
+  ],
+  "ms": 106627
+}

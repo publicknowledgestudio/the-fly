@@ -1,0 +1,166 @@
+<title>The Fly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Caveat+Brush&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root { --ground: #140A17; --ink: #2A1630; --paper: #F5FAF9; --mint: #C8E9EA; --verm: #F0543F; }
+  html.locked, html.locked body { overflow: hidden; }
+  body { margin: 0; background: var(--ground); color: var(--paper); font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; overscroll-behavior: none; }
+  #frame { position: fixed; inset: 0; display: grid; place-items: center; }
+  #track { width: 1px; pointer-events: none; }
+  #stage { position: relative; width: min(100vw, calc(100vh * 16 / 9)); aspect-ratio: 16 / 9; overflow: hidden; background: #000; cursor: none; user-select: none; -webkit-user-select: none; }
+  #cam { position: absolute; inset: 0; transform-origin: 50% 50%; will-change: transform; }
+  .view { position: absolute; inset: 0; opacity: 0; visibility: hidden; }
+  .view.on { opacity: 1; visibility: visible; }
+  #world { position: absolute; inset: 0; transform: scale(1.05); transform-origin: 50% 50%; }
+  .layer { position: absolute; inset: 0; will-change: transform; }
+  .layer > .pal { position: absolute; inset: 0; }
+  .layer img { position: absolute; display: block; max-width: none; height: auto; pointer-events: none; transition: opacity .6s linear; }
+  .pupil { position: absolute; aspect-ratio: 1; background: #2A1630; border-radius: 52% 46% 50% 48% / 48% 52% 46% 54%; will-change: transform; transition: background-color .6s; }
+  #flat, .seqv { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; pointer-events: none; will-change: transform; }
+  #flat.on, .seqv.on { opacity: 1; }
+  #screen { position: absolute; left: 0; top: 0; transform-origin: 0 0; overflow: hidden; pointer-events: none; opacity: 0; background: #1E0F22; color: #EDE3F2; font: 500 15px/1.5 "IBM Plex Mono", ui-monospace, Menlo, monospace; }
+  #screen.on { opacity: 1; }
+  #screen.masked { -webkit-mask-image: url(a/C-wave-screenmask.png); mask-image: url(a/C-wave-screenmask.png); -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
+  #screen .ui { position: absolute; inset: 0; display: none; }
+  #screen[data-mode="doc"] .doc, #screen[data-mode="boot"] .boot, #screen[data-mode="error"] .err { display: block; }
+  #screen[data-mode="black"] { background: #07030A; }
+  .doc .bar { height: 30px; display: flex; align-items: center; gap: 8px; padding: 0 12px; background: #2E1834; font-size: 12px; color: #B9A9C0; }
+  .doc .bar i { width: 9px; height: 9px; border-radius: 50%; background: #F0543F; opacity: .8; }
+  .doc .bar i + i { background: #F2B01E; } .doc .bar i + i + i { background: #2E8B4E; }
+  .doc .bar span { margin-left: 8px; }
+  .doc .bar b { margin-left: auto; font-weight: 500; }
+  .doc .page { padding: 22px 36px; font-size: 15px; line-height: 1.7; white-space: pre-wrap; }
+  .doc .page h1 { font: 800 24px/1.1 "Bricolage Grotesque", system-ui, sans-serif; margin: 0 0 12px; color: #F5FAF9; }
+  .doc .caret { display: inline-block; width: 8px; height: 17px; background: #F2B01E; vertical-align: -3px; animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .boot, .err { text-align: center; }
+  .boot .t { position: absolute; left: 0; right: 0; top: 150px; letter-spacing: .18em; font-size: 16px; }
+  .boot .track { position: absolute; left: 150px; right: 150px; top: 196px; height: 10px; background: #3A2440; }
+  .boot .fill { height: 100%; width: 0; background: #F2B01E; }
+  .err .t { position: absolute; left: 30px; right: 30px; top: 150px; font: 800 28px/1.15 "Bricolage Grotesque", system-ui, sans-serif; color: #F0543F; letter-spacing: .01em; }
+  .err .s { position: absolute; left: 0; right: 0; top: 250px; font-size: 13px; color: #B9A9C0; letter-spacing: .1em; }
+
+  .fly { position: absolute; left: 0; top: 0; width: 3.4%; aspect-ratio: 318 / 238; pointer-events: none; z-index: 20; will-change: transform; opacity: 0; transition: opacity .2s; }
+  .fly.on { opacity: 1; }
+  .fly img { position: absolute; display: block; max-width: none; height: auto; }
+  .fly .wl, .fly .wr { opacity: .88; }
+  .fly.flying .wl { animation: flapL 44ms linear infinite alternate; }
+  .fly.flying .wr { animation: flapR 44ms linear infinite alternate; }
+  .fly.landed .wl { transform: rotate(-50deg); opacity: 1; }
+  .fly.landed .wr { transform: rotate(50deg); opacity: 1; }
+  @keyframes flapL { from { transform: rotate(4deg); } to { transform: rotate(-62deg); } }
+  @keyframes flapR { from { transform: rotate(-4deg); } to { transform: rotate(62deg); } }
+  #wallfly { position: absolute; width: 2.6%; opacity: 0; pointer-events: none; transform: rotate(-8deg); }
+  #wallfly.on { opacity: 1; }
+
+  .fx { position: absolute; pointer-events: none; opacity: 0; will-change: transform, opacity; }
+  #bzz { width: 26%; } #thwack { width: 62%; left: 19%; top: 28%; }
+  .say { position: absolute; pointer-events: none; opacity: 0; font: 400 clamp(22px, 4.2vw, 64px)/1 "Caveat Brush", "Bricolage Grotesque", cursive; color: #2A1630; white-space: nowrap; transform: translate(-50%, -50%) rotate(-3deg); text-shadow: 0 0 1px rgba(245,250,249,.4); transition: opacity .35s; }
+  .say.on { opacity: 1; }
+  .say.light { color: #F5FAF9; }
+  #again { position: absolute; right: 4%; top: 8%; display: flex; flex-direction: column; align-items: flex-end; gap: .2em; pointer-events: none; font: 400 clamp(18px, 3vw, 44px)/1 "Caveat Brush", cursive; color: #320D41; }
+  #again span { transform: rotate(-4deg); }
+  #black { position: absolute; inset: 0; background: #000; opacity: 0; pointer-events: none; }
+  #eye { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; transition: opacity .25s; z-index: 15; }
+  #eye.on { opacity: 1; }
+  #progress { position: absolute; left: 4%; right: 4%; bottom: 2.4%; height: 18px; z-index: 30; cursor: ew-resize; opacity: 0; transition: opacity .6s; touch-action: none; }
+  #progress.on { opacity: 1; }
+  #progress .line { position: absolute; left: 0; right: 0; top: 8px; height: 2px; background: rgba(245,250,249,.55); mix-blend-mode: difference; }
+  #progress .done { position: absolute; left: 0; top: 7px; height: 4px; background: #F2B01E; width: 0; }
+  #progress i { position: absolute; top: 3px; width: 2px; height: 12px; background: rgba(245,250,249,.7); mix-blend-mode: difference; }
+  #progress .hint { position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%); white-space: nowrap; font: 500 11px/1 "IBM Plex Mono", ui-monospace, Menlo, monospace; letter-spacing: .18em; text-transform: uppercase; color: #F5FAF9; mix-blend-mode: difference; transition: opacity .6s; }
+  .hand { position: absolute; left: 0; top: 0; transform-origin: 0 0; pointer-events: none; display: none; will-change: transform; }
+  .hand.on { display: block; }
+  .hand img { position: absolute; display: block; max-width: none; }
+  .hand .pose { display: none; } .hand .pose.on { display: block; }
+  #stage.bump #cam { animation: bump .22s steps(2) 1; }
+  @keyframes bump { 0% { transform: translate(.6%, .5%); } 50% { transform: translate(-.5%, -.4%); } 100% { transform: none; } }
+  #black.on { opacity: 1; }
+
+  /* ---- the dream layer ---- */
+  #haze { position: absolute; inset: 0; pointer-events: none; z-index: 16; opacity: 0; background: radial-gradient(ellipse at 50% 48%, rgba(255,245,250,0) 52%, rgba(214,192,226,.42) 100%); -webkit-mask-image: radial-gradient(ellipse at 50% 48%, transparent 46%, #000 92%); mask-image: radial-gradient(ellipse at 50% 48%, transparent 46%, #000 92%); }
+  #bloom { position: absolute; inset: 0; pointer-events: none; z-index: 16; opacity: 0; mix-blend-mode: screen; background: radial-gradient(ellipse at 62% 30%, rgba(255,236,214,.55), rgba(255,236,214,0) 60%); }
+  .fly.ghost { z-index: 19; }
+  .fly.ghost .wl, .fly.ghost .wr { display: none; }
+  .flyshadow { position: absolute; left: 0; top: 0; pointer-events: none; filter: brightness(0) blur(6px); opacity: 0; will-change: transform; }
+  #props { position: absolute; inset: 0; pointer-events: none; z-index: 17; }
+  #props img { position: absolute; left: 0; top: 0; opacity: 0; will-change: transform; filter: blur(1.2px); }
+  .say { filter: blur(7px); transition: opacity .7s, filter 1s; }
+  .say.on { filter: blur(0); }
+  .say.soul { color: #EEF8F5; text-shadow: 0 0 18px rgba(214,240,232,.9), 0 0 2px rgba(42,22,48,.5); }
+  .ghosthand { position: absolute; left: 0; top: 0; transform-origin: 0 0; pointer-events: none; }
+  #stage.textured .layer img, #stage.textured #flat, #stage.textured .seqv { filter: url(#fx-texture); }
+  #stage.shake #cam { animation: shake .42s steps(2) 1; }
+  @keyframes shake { 0% { transform: translate(2%, -1.5%) rotate(1deg); } 25% { transform: translate(-2.2%, 1%) rotate(-1.2deg); } 50% { transform: translate(1.4%, 1.6%); } 75% { transform: translate(-1%, -1%); } 100% { transform: none; } }
+
+  #title { position: absolute; inset: 0; display: grid; place-items: center; align-content: center; gap: 18px; background: rgba(20, 10, 23, .55); z-index: 40; cursor: pointer; transition: opacity .8s; text-align: center; padding: 16px; }
+  #title h1 { margin: 0; font: 800 clamp(48px, 13vw, 190px)/.85 "Bricolage Grotesque", system-ui, sans-serif; letter-spacing: -0.035em; color: #F5FAF9; }
+  #title h1 span { color: var(--verm); }
+  #title p { margin: 0; font-size: clamp(12px, 1.4vw, 16px); letter-spacing: .16em; text-transform: uppercase; color: #E4D8EA; }
+  #title .go { color: #F2B01E; }
+  #title.gone { opacity: 0; pointer-events: none; }
+  #end { position: absolute; inset: 0; display: grid; place-items: center; align-content: center; gap: 14px; background: #140A17; z-index: 40; opacity: 0; pointer-events: none; transition: opacity 1.2s; text-align: center; }
+  #end.on { opacity: 1; pointer-events: auto; cursor: pointer; }
+  #end h2 { margin: 0; font: 800 clamp(40px, 9vw, 130px)/.9 "Bricolage Grotesque", system-ui, sans-serif; letter-spacing: -0.03em; }
+  #end h2 span { color: var(--verm); }
+  #end p { margin: 0; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: #B9A9C0; }
+  @media (prefers-reduced-motion: reduce) { .fly.flying .wl, .fly.flying .wr { animation: none; } #stage.shake #cam { animation: none; } }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="fx-texture" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="7" result="noise"/>
+    <feColorMatrix in="noise" type="saturate" values="0" result="grey"/>
+    <feComposite in="SourceGraphic" in2="grey" operator="arithmetic" k1="0" k2="1" k3="0.1" k4="-0.05" result="dith"/>
+    <feComponentTransfer in="dith">
+      <feFuncR type="discrete" tableValues="0 .1 .2 .3 .4 .5 .6 .7 .8 .9 1"/>
+      <feFuncG type="discrete" tableValues="0 .1 .2 .3 .4 .5 .6 .7 .8 .9 1"/>
+      <feFuncB type="discrete" tableValues="0 .1 .2 .3 .4 .5 .6 .7 .8 .9 1"/>
+      <feFuncA type="identity"/>
+    </feComponentTransfer>
+  </filter>
+</svg>
+
+<div id="track"></div>
+<div id="frame">
+  <div id="stage" aria-label="The Fly &mdash; an interactive short. Your cursor is the fly.">
+    <div id="cam"><div id="world">
+      <div id="views"></div>
+      <img id="flat" alt="">
+      <div id="screen" data-mode="doc">
+        <div class="ui doc">
+          <div class="bar"><i></i><i></i><i></i><span>essay_FINAL_v7.doc</span><b id="words">2,431 words</b></div>
+          <div class="page"><h1>On Keeping Still</h1><span id="typed"></span><span class="caret"></span></div>
+        </div>
+        <div class="ui boot"><div class="t" id="boot-t">RECOVERING SYSTEM&hellip;</div><div class="track"><div class="fill" id="boot-fill"></div></div></div>
+        <div class="ui err"><div class="t">YOUR WORK COULD NOT BE RECOVERED.</div><div class="s">0 of 2,431 words restored</div></div>
+      </div>
+      <img id="wallfly" src="a/fly-landed.webp" alt="">
+      <div class="hand" id="hand"></div>
+    </div></div>
+    <img class="fx" id="bzz" src="a/bzz.webp" alt="">
+    <img class="fx" id="thwack" src="a/thwack.webp" alt="">
+    <div class="say" id="say"></div>
+    <div id="again" aria-hidden="true"></div>
+    <div class="fly" id="fly" aria-hidden="true">
+      <img class="wl" src="a/fly-wingL.webp" alt=""><img class="wr" src="a/fly-wingR.webp" alt=""><img class="bd" src="a/fly-body.webp" alt="">
+    </div>
+    <div id="props" aria-hidden="true"><img id="prop-mug" src="a/prop-mug.webp" alt=""><img id="prop-books" src="a/prop-books.webp" alt=""><img id="prop-pencils" src="a/prop-pencils.webp" alt=""></div>
+    <canvas id="eye" aria-hidden="true"></canvas>
+    <div id="haze" aria-hidden="true"></div>
+    <div id="bloom" aria-hidden="true"></div>
+    <div id="black"></div>
+    <div id="progress" aria-hidden="true"><div class="line"></div><div class="done"></div><div class="hint" id="hint">scroll</div></div>
+    <div id="title" role="button" tabindex="0" aria-label="Begin">
+      <h1>The Fly<span>.</span></h1>
+      <p>You are the fly. Sound on. Click, then scroll.</p>
+      <p class="go" id="go">Painting the room&hellip;</p>
+    </div>
+    <div id="end" role="button" tabindex="0" aria-label="Watch again">
+      <h2>End<span>.</span></h2>
+      <p>Scroll up to rewind &middot; click to start again</p>
+    </div>
+  </div>
+</div>
+

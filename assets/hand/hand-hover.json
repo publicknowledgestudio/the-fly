@@ -1,0 +1,21 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "Paint ONLY the person's right hand and forearm from the FIRST image, isolated on a flat, even, pale grey background (#D8D8D8) with nothing else in the picture. Same viewpoint as the FIRST image (from behind and slightly above, over the shoulder): the open hand is raised, palm facing down and away from us, fingers spread and slightly curled, ready to slap something on the desk. The forearm runs straight down from the wrist to the bottom edge of the image and is cut off by it. Same lilac-violet skin with one darker violet shadow tone, same crayon / oil-pastel texture, no outlines. Portrait image, the hand in the upper half, centred.\n\nMedium: hand-painted gouache and poster paint on paper with oil-pastel scumbling, painted over photographic reference like a single rotoscoped animation frame. Flat opaque colour shapes with NO outlines; every edge is a rough dry-brush edge. Visible directional brush strokes and paper tooth inside every shape, slight chalky grain. Colour is assigned, not naturalistic: skin is lilac-violet, each garment and object is one flat saturated colour with at most one darker tone. Light is shown ONLY by hard-edged flat cast-shadow shapes in one cool colour — no gradients, no soft shading, no specular highlights, nothing that looks 3D-rendered or photographic. Faces are almost featureless: two small dark plum dot pupils, short brush-stroke brows, a tiny nose shadow, no detailed mouth. Loose, naive, confident painting. Use the attached reference images ONLY for painting technique, texture, edge quality and colour attitude — do not copy their subjects, skateboards, skateparks, running tracks, poses or compositions.\n\nNo text, no letters, no labels, no signature, no border.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab4e81/ljiiuZzVZ5bd-3pIxO60u_1789989130550.png",
+      "https://v3b.fal.media/files/b/0aab4e82/XvYQg9rqQVNDdXe2t8UHv_1789989139461.png"
+    ],
+    "image_size": {
+      "width": 1024,
+      "height": 1536
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c3aa-d786-71c3-9166-b49a1fc76ee0",
+  "files": [
+    "assets/hand/hand-hover.png"
+  ],
+  "ms": 90666
+}

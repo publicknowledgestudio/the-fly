@@ -1,0 +1,22 @@
+{
+  "model": "bytedance/seedream/v5/pro/edit",
+  "input": {
+    "prompt": "Scene: a calm, perfectly organised home desk on a sunny afternoon. Camera: straight-on front view from the far side of the desk, lens at the seated person's chest height, 35mm-equivalent slightly wide lens, horizon about 45% down from the top of frame, 16:9 landscape. Composition: the person sits at the desk slightly left of centre, facing the camera, head tilted down, calmly focused on an open laptop. We see the BACK of the laptop lid in the lower-centre foreground; the lid hides their hands and forearms. The desk top is a flat slab spanning the full frame width, its front edge near the bottom of frame. On the desk, neatly arranged: a white ceramic coffee mug in the right foreground, a desk lamp at far left, a pen cup, a tidy stack of two notebooks, a small potted plant on the right. Behind the person: the back of a simple wooden chair, and a plain back wall with a window at upper right through which hard afternoon sunlight falls. Light: hard sunlight from the window at upper right behind the person; cast shadows fall toward the lower left as flat cool shapes, and a pale parallelogram of window light lies on the wall. Leave generous empty wall space around the person's head. Mood: serene, ordered, quiet.\n\nThe person: an androgynous young adult, about 25, slim build, realistic human proportions (about 7.5 heads tall). Lilac-violet skin (#A58BC9) with one slightly darker violet shadow tone. Short dark hair mostly hidden under a forest-green knit beanie (#2E8B4E). Oversized saffron-yellow crew-neck t-shirt (#F2B01E). Loose cobalt-blue jeans (#3B6BB5). Green-and-white sneakers. No glasses, no jewellery, no accessories.\n\nPalette: pale mint-aqua wall (#C8E9EA) scumbled with whiter mint strokes (#EEF7F9); vermilion-red desk top (#F0543F) with a deeper red front edge (#B04639); saffron t-shirt, cobalt jeans, green beanie, lilac skin; off-white laptop (#E6ECEB); cast shadows as flat cool teal-grey shapes (#8FB9B8); darkest accents deep plum (#3A1E3F).\n\nMedium: hand-painted gouache and poster paint on paper with oil-pastel scumbling, painted over photographic reference like a single rotoscoped animation frame. Flat opaque colour shapes with NO outlines; every edge is a rough dry-brush edge. Visible directional brush strokes and paper tooth inside every shape, slight chalky grain. Colour is assigned, not naturalistic: skin is lilac-violet, each garment and object is one flat saturated colour with at most one darker tone. Light is shown ONLY by hard-edged flat cast-shadow shapes in one cool colour — no gradients, no soft shading, no specular highlights, nothing that looks 3D-rendered or photographic. Faces are almost featureless: two small dark plum dot pupils, short brush-stroke brows, a tiny nose shadow, no detailed mouth. Loose, naive, confident painting. Use the attached reference images ONLY for painting technique, texture, edge quality and colour attitude — do not copy their subjects, skateboards, skateparks, running tracks, poses or compositions.\n\nA single full-bleed image — not a grid, not a comic panel, not a collage.\n\nNo text, no letters, no labels, no signature, no border.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab48c0/jdmmDXEF-fBrgdye42ymn_1789974400360.png",
+      "https://v3b.fal.media/files/b/0aab48bc/FT5n8A-E-3-c23THXfgHN_1789974366867.png",
+      "https://v3b.fal.media/files/b/0aab48be/9tgu5ki78jJqjaR9GtTIL_1789974382259.png",
+      "https://v3b.fal.media/files/b/0aab48bf/DQ6F8ZvFUqDFPXVB93c8S_1789974390500.png"
+    ],
+    "image_size": {
+      "width": 2688,
+      "height": 1512
+    },
+    "output_format": "png"
+  },
+  "requestId": "01a0c2cb-226f-7052-9638-7e2765ba4ef7",
+  "files": [
+    "assets/stylesheet/A-master-seedream5.png"
+  ],
+  "ms": 98601
+}

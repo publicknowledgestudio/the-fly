@@ -1,0 +1,20 @@
+{
+  "model": "fal-ai/nano-banana-pro/edit",
+  "input": {
+    "prompt": "A character model sheet for a hand-painted animated short, on flat warm off-white paper. Top row: four full-body standing views of the SAME person, evenly spaced with clear gaps — front, three-quarter, side profile, back. Bottom row: six head-and-shoulders studies of the same person: (1) calm focus, eyes lowered; (2) wary, eyes raised, looking up from under the brows; (3) eyes darted hard to one side, tracking something; (4) dead-calm flat stare straight ahead, lids half lowered; (5) hollow despair, eyes blank and empty, shoulders collapsed; (6) flat hateful glare straight at the viewer. Emotion comes only from brow strokes, pupil position, eyelid shapes and posture — keep the face minimal.\n\nThe person: an androgynous young adult, about 25, slim build, realistic human proportions (about 7.5 heads tall). Lilac-violet skin (#A58BC9) with one slightly darker violet shadow tone. Short dark hair mostly hidden under a forest-green knit beanie (#2E8B4E). Oversized saffron-yellow crew-neck t-shirt (#F2B01E). Loose cobalt-blue jeans (#3B6BB5). Green-and-white sneakers. No glasses, no jewellery, no accessories.\n\nColours: exactly the character colours above; cast shadows as flat cool teal-grey shapes (#8FB9B8); darkest accents deep plum (#3A1E3F).\n\nMedium: hand-painted gouache and poster paint on paper with oil-pastel scumbling, painted over photographic reference like a single rotoscoped animation frame. Flat opaque colour shapes with NO outlines; every edge is a rough dry-brush edge. Visible directional brush strokes and paper tooth inside every shape, slight chalky grain. Colour is assigned, not naturalistic: skin is lilac-violet, each garment and object is one flat saturated colour with at most one darker tone. Light is shown ONLY by hard-edged flat cast-shadow shapes in one cool colour — no gradients, no soft shading, no specular highlights, nothing that looks 3D-rendered or photographic. Faces are almost featureless: two small dark plum dot pupils, short brush-stroke brows, a tiny nose shadow, no detailed mouth. Loose, naive, confident painting. Use the attached reference images ONLY for painting technique, texture, edge quality and colour attitude — do not copy their subjects, skateboards, skateparks, running tracks, poses or compositions.\n\nNo text, no letters, no labels, no signature, no border.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab48c0/jdmmDXEF-fBrgdye42ymn_1789974400360.png",
+      "https://v3b.fal.media/files/b/0aab48bc/FT5n8A-E-3-c23THXfgHN_1789974366867.png",
+      "https://v3b.fal.media/files/b/0aab48be/9tgu5ki78jJqjaR9GtTIL_1789974382259.png",
+      "https://v3b.fal.media/files/b/0aab48bf/DQ6F8ZvFUqDFPXVB93c8S_1789974390500.png"
+    ],
+    "aspect_ratio": "16:9",
+    "resolution": "2K",
+    "output_format": "png"
+  },
+  "requestId": "01a0c2cb-2279-7d91-83ce-4d9011fa168f",
+  "files": [
+    "assets/stylesheet/character-nanobananapro.png"
+  ],
+  "ms": 75597
+}

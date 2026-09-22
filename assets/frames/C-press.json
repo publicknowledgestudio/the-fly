@@ -1,0 +1,21 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "Edit the FIRST image. The person's right index finger presses a single key on the keyboard, the other fingers curled, the hand slightly raised and tense. The screen stays blank dark plum. Keep everything else exactly the same and pixel-aligned: the camera, the framing, the background, the lighting, the colours and the oil-pastel brush texture. Same person, on-model. No text. The SECOND image is the character model sheet, for reference only.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab49fe/RJGcFfbpNnPlw_L_UoBWa_1789977579700.png",
+      "https://v3b.fal.media/files/b/0aab49ff/wVh8Xoqp4AAHkTcrGPC3K_1789977596497.png"
+    ],
+    "image_size": {
+      "width": 2048,
+      "height": 1152
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c2fb-2f0e-7f82-83aa-79a2bf7fa41d",
+  "files": [
+    "assets/frames/C-press.png"
+  ],
+  "ms": 106699
+}

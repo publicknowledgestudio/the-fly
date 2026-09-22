@@ -1,0 +1,23 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "The FIRST image is a close shot of this scene. New shot: the SAME desk, laptop and slumped person, now seen from very far above and away — tiny, near the centre of the frame. The room's walls have fallen away: the desk floats in a vast, calm, endless pale mauve and butter-yellow sky of soft painted clouds that stretches to a low horizon. Around the desk, weightless: the wooden chair tilted in mid-air, two notebooks, pencils, the white mug, a sheet of paper — all drifting. A lone white window frame stands upright in the sky nearby, and through it is a night sky with a crescent moon. Long hard cyan-grey shadows fall across the cloud floor. Above the desk, a translucent pale ghost of the person drifts slowly upward. Vast, silent, weightless.\n\nPalette: drained mauve wall (#DEC4BC, #C8B8B6); pale butter-yellow desk top (#F2DD7E, #F7F0A4); cast shadows in a flat cool cyan-grey (#8FB3C0); violet-grey mid-tones (#7B6F96); darkest accents blackish violet (#2B1A3F); the t-shirt faded to pale ochre (#E8C766), jeans to dusty blue (#6E86B0).\n\nThis is a DREAM: surrealist, in the spirit of Magritte and de Chirico — calm, impossible, weightless, with long hard shadows falling onto nothing. Painted in exactly the same hand as the FIRST image.\n\nMedium: hand-painted gouache and poster paint on paper with oil-pastel scumbling, painted over photographic reference like a single rotoscoped animation frame. Flat opaque colour shapes with NO outlines; every edge is a rough dry-brush edge. Visible directional brush strokes and paper tooth inside every shape, slight chalky grain. Colour is assigned, not naturalistic: skin is lilac-violet, each garment and object is one flat saturated colour with at most one darker tone. Light is shown ONLY by hard-edged flat cast-shadow shapes in one cool colour — no gradients, no soft shading, no specular highlights, nothing that looks 3D-rendered or photographic. Faces are almost featureless: two small dark plum dot pupils, short brush-stroke brows, a tiny nose shadow, no detailed mouth. Loose, naive, confident painting. Use the attached reference images ONLY for painting technique, texture, edge quality and colour attitude — do not copy their subjects, skateboards, skateparks, running tracks, poses or compositions.\n\nA single full-bleed image — not a grid, not a comic panel, not a collage.\n\nNo text, no letters, no labels, no signature, no border.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab4fe5/-Ib4JfjyMpPi7zHH63-_Z_1789992693429.png",
+      "https://v3b.fal.media/files/b/0aab4fe6/oJ0XxTo0vT2sXxky15Hce_1789992703004.png",
+      "https://v3b.fal.media/files/b/0aab48bc/FT5n8A-E-3-c23THXfgHN_1789974366867.png",
+      "https://v3b.fal.media/files/b/0aab48bf/DQ6F8ZvFUqDFPXVB93c8S_1789974390500.png"
+    ],
+    "image_size": {
+      "width": 2048,
+      "height": 1152
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c3e1-3754-7171-806a-a311f7809c52",
+  "files": [
+    "assets/dream/E2-wide.png"
+  ],
+  "ms": 128846
+}

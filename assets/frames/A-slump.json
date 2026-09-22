@@ -1,0 +1,21 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "Edit the FIRST image. The person has gone completely hollow: shoulders collapsed, spine sagging, head hanging forward and tilted a little to one side, face slack, eyes blank and empty (no pupils, just the lids), mouth slightly open. Same position in the frame, same seat, still behind the laptop. Keep everything else exactly the same and pixel-aligned: the camera, the framing, the background, the lighting, the colours and the oil-pastel brush texture. Same person, on-model. No text. The SECOND image is the character model sheet, for reference only.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab49ea/_K03xOSFMMb2AN0-IyC-3_1789977388661.png",
+      "https://v3b.fal.media/files/b/0aab49ec/lYkXYuh6u7W190FtFuD6L_1789977404879.png"
+    ],
+    "image_size": {
+      "width": 2048,
+      "height": 1152
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c2f7-dfda-7463-a74a-bac40c9b812a",
+  "files": [
+    "assets/frames/A-slump.png"
+  ],
+  "ms": 101278
+}

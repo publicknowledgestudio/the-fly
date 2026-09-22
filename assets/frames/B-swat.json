@@ -1,0 +1,21 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "Edit the FIRST image. The person, annoyed, swats at something in front of their face: their open right hand sweeps across the lower right of the frame, very large and close to camera, fingers spread, with a strong dry-brush motion smear; brows pulled down, eyes squinting. Keep everything else exactly the same and pixel-aligned: the camera, the framing, the background, the lighting, the colours and the oil-pastel brush texture. Same person, on-model. No text. The SECOND image is the character model sheet, for reference only.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab49fe/yZaO27mdZpwnuMsc48eN6_1789977579668.png",
+      "https://v3b.fal.media/files/b/0aab49ff/BlAQWFhXk9X-cPUeVQk3I_1789977598107.png"
+    ],
+    "image_size": {
+      "width": 2048,
+      "height": 1152
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c2fb-386e-7291-aea1-a4dbecd514ab",
+  "files": [
+    "assets/frames/B-swat.png"
+  ],
+  "ms": 103136
+}

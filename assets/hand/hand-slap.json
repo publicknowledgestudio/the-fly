@@ -1,0 +1,20 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "Edit the FIRST image. The hand now SLAMS down: fingers splayed flat and wide, the palm flattened as if smacking a table at full force, with a short violent dry-brush motion smear trailing upward from the fingertips. Same position, same size, same forearm, same flat pale grey background. Keep everything else exactly the same and pixel-aligned: the camera, the framing, the background, the lighting, the colours and the oil-pastel brush texture. Same person, on-model. No text.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab4eaf/_haUcl2PY7o5LpDMNWaa__1789989597829.png"
+    ],
+    "image_size": {
+      "width": 1024,
+      "height": 1536
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c3b1-cd9a-7943-be95-9c024698c327",
+  "files": [
+    "assets/hand/hand-slap.png"
+  ],
+  "ms": 86616
+}

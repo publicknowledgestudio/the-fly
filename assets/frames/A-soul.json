@@ -1,0 +1,21 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "Edit the FIRST image. The person's soul is leaving their body: a translucent, pale mint-white ghostly duplicate of the person (same beanie and silhouette, softly glowing, painted in thin pale strokes) floats upward out of the slumped body and hovers above their head, arms dangling, dazed. The slumped body below stays exactly as it is. Keep everything else exactly the same and pixel-aligned: the camera, the framing, the background, the lighting, the colours and the oil-pastel brush texture. Same person, on-model. No text. The SECOND image is the character model sheet, for reference only.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab49fe/zC8uekgODcWhcz4oYJy8i_1789977579702.png",
+      "https://v3b.fal.media/files/b/0aab49ff/CVWVtqjGxARMBWxgcneWW_1789977595187.png"
+    ],
+    "image_size": {
+      "width": 2048,
+      "height": 1152
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c2fb-2ba9-77f3-840d-2746fba27c94",
+  "files": [
+    "assets/frames/A-soul.png"
+  ],
+  "ms": 109231
+}

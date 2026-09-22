@@ -1,0 +1,21 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "Recolour the FIRST image only. Keep every shape, outline position, object, the person, the composition, the camera and the brush-stroke texture exactly the same — pixel-aligned — and change ONLY the colours, mapping each area to this palette: Palette: drained mauve wall (#DEC4BC, #C8B8B6); pale butter-yellow desk top (#F2DD7E, #F7F0A4); cast shadows in a flat cool cyan-grey (#8FB3C0); violet-grey mid-tones (#7B6F96); darkest accents blackish violet (#2B1A3F); the t-shirt faded to pale ochre (#E8C766), jeans to dusty blue (#6E86B0). Use the second image only as a guide to the colour mood. No text, no letters, no labels, no signature, no border.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab48da/P2x6wU4k5oA8r8WCs46vC_1789974659948.png",
+      "https://v3b.fal.media/files/b/0aab48bc/FT5n8A-E-3-c23THXfgHN_1789974366867.png"
+    ],
+    "image_size": {
+      "width": 2048,
+      "height": 1152
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c2ce-05ae-7441-b589-3b42b00fade4",
+  "files": [
+    "assets/stylesheet/A-master-p3.png"
+  ],
+  "ms": 97555
+}

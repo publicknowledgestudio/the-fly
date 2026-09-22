@@ -1,0 +1,21 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "Recolour the FIRST image only. Keep every shape, outline position, object, the person, the composition, the camera and the brush-stroke texture exactly the same — pixel-aligned — and change ONLY the colours, mapping each area to this palette: Palette: hot-pink wall (#F865C1) scumbled with lighter pinks (#F97DC3, #FDC9E5); magenta desk top (#EB50C0); deep plum (#320D41) for all shadows and darks, with halftone-dot texture in the darkest areas; saffron t-shirt stays; teal accents (#129A9A); lilac skin pushed toward plum (#73256F in shadow). Use the second image only as a guide to the colour mood. No text, no letters, no labels, no signature, no border.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab48da/P2x6wU4k5oA8r8WCs46vC_1789974659948.png",
+      "https://v3b.fal.media/files/b/0aab48be/9tgu5ki78jJqjaR9GtTIL_1789974382259.png"
+    ],
+    "image_size": {
+      "width": 2048,
+      "height": 1152
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c2ce-0557-7eb0-83d4-9dabf6d022c7",
+  "files": [
+    "assets/stylesheet/A-master-p2.png"
+  ],
+  "ms": 91234
+}

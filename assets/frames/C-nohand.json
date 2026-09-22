@@ -1,0 +1,20 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "Edit the FIRST image. Remove the person's right forearm and hand from the keyboard entirely: the right arm now hangs down out of frame below the desk edge, so the keyboard is fully visible and empty. The back of the head, the beanie, the yellow shoulder, the laptop, the dark screen and the mug stay exactly as they are. Keep everything else exactly the same and pixel-aligned: the camera, the framing, the background, the lighting, the colours and the oil-pastel brush texture. Same person, on-model. No text.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab4e80/O1xlKbq1hixSqdl5Ctl0z_1789989120214.png"
+    ],
+    "image_size": {
+      "width": 2048,
+      "height": 1152
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c3aa-9464-7993-a4ae-4354721544e9",
+  "files": [
+    "assets/frames/C-nohand.png"
+  ],
+  "ms": 95974
+}

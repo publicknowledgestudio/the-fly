@@ -1,0 +1,35 @@
+{
+  "model": "recraft/v4/style/text-to-image",
+  "input": {
+    "style_id": "4c71ef1b-272a-4ef3-b3a4-db6d697fba8c",
+    "background_color": {
+      "r": 245,
+      "g": 241,
+      "b": 232
+    },
+    "image_size": "landscape_16_9",
+    "prompt": "Animation sprite sheet of ONE common housefly, six separate poses evenly spaced in two rows on plain off-white paper: top view wings up; top view wings down blurred mid-beat; side view standing landed; three-quarter view landed rubbing front legs; front view facing the viewer with two big dark red-brown eyes; flying with a smeared wing blur. Body a blunt black-plum gouache blot, wings translucent pale lilac-grey, rough dry-brush edges, no outlines. No text.",
+    "colors": [
+      {
+        "r": 58,
+        "g": 30,
+        "b": 63
+      },
+      {
+        "r": 200,
+        "g": 190,
+        "b": 215
+      },
+      {
+        "r": 120,
+        "g": 40,
+        "b": 30
+      }
+    ]
+  },
+  "requestId": "01a0c2cb-43ae-7251-81c9-f3a49a2731b2",
+  "files": [
+    "assets/stylesheet/fly-sheet-recraft.webp"
+  ],
+  "ms": 27477
+}

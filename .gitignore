@@ -1,0 +1,29 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# dependencies / local tooling
+node_modules/
+.claude/
+__pycache__/
+.DS_Store
+
+# third-party style references (not ours to redistribute) — put your own in refs/
+refs/
+
+# heavy, regenerable intermediates (the built film in film/ contains everything needed to run)
+assets/seq/
+assets/seq-out/
+assets/video/
+assets/A/
+assets/B/
+assets/C/
+assets/Cn/
+assets/A-soul/
+assets/audio/
+assets/*.log
+assets/**/_*.png
+film/src.v*.html
+film/src.v*.js
+film/files.json

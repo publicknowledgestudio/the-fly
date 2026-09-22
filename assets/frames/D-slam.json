@@ -1,0 +1,21 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "Edit the FIRST image. The person's open palm slams toward the camera and fills most of the frame, enormous and extremely close, with a violent smeared dry-brush motion streak; only one eye of the flat stare is still visible past the edge of the hand. Keep everything else exactly the same and pixel-aligned: the camera, the framing, the background, the lighting, the colours and the oil-pastel brush texture. Same person, on-model. No text. The SECOND image is the character model sheet, for reference only.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab4a21/QQ-G4x8WmDAUt5_wdkfuB_1789977930006.png",
+      "https://v3b.fal.media/files/b/0aab4a22/n4bLE2I7Pe3O4TBrU-6qg_1789977940565.png"
+    ],
+    "image_size": {
+      "width": 2048,
+      "height": 1152
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c2ff-fb57-7a21-ab6d-d71912d6a992",
+  "files": [
+    "assets/frames/D-slam.png"
+  ],
+  "ms": 107313
+}

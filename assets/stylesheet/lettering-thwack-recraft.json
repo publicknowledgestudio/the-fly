@@ -1,0 +1,30 @@
+{
+  "model": "recraft/v4/style/text-to-image",
+  "input": {
+    "style_id": "4c71ef1b-272a-4ef3-b3a4-db6d697fba8c",
+    "background_color": {
+      "r": 245,
+      "g": 241,
+      "b": 232
+    },
+    "image_size": "landscape_16_9",
+    "prompt": "Hand-painted sound-effect lettering reading exactly \"THWACK!\" — huge, heavy, slammed brush letters in vermilion red gouache with a deep plum drop shape behind, splattered dry-brush edges, on plain off-white paper. Nothing else in the image.",
+    "colors": [
+      {
+        "r": 240,
+        "g": 84,
+        "b": 63
+      },
+      {
+        "r": 58,
+        "g": 30,
+        "b": 63
+      }
+    ]
+  },
+  "requestId": "01a0c2cb-43aa-76c3-b850-c0ca11639fb0",
+  "files": [
+    "assets/stylesheet/lettering-thwack-recraft.webp"
+  ],
+  "ms": 30424
+}

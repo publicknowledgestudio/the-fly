@@ -1,0 +1,21 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "Edit the FIRST image. The person, annoyed, has lifted their right hand above the laptop lid and swats at the air beside their head — open palm, fingers spread, mid-swing, with a short dry-brush motion smear behind the hand; brows pulled down. The laptop lid still hides the other hand. Keep everything else exactly the same and pixel-aligned: the camera, the framing, the background, the lighting, the colours and the oil-pastel brush texture. Same person, on-model. No text. The SECOND image is the character model sheet, for reference only.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab49ea/YBJ6EytPtYf10HbnHpy9q_1789977388628.png",
+      "https://v3b.fal.media/files/b/0aab49ec/xXO32PAhUBvCBKBlAmGiL_1789977405470.png"
+    ],
+    "image_size": {
+      "width": 2048,
+      "height": 1152
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c2f7-e3f6-7c23-8608-9692b8d46c7d",
+  "files": [
+    "assets/frames/A-swat.png"
+  ],
+  "ms": 102333
+}

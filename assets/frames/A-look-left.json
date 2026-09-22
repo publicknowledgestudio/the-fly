@@ -1,0 +1,20 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "Edit the FIRST image. The person has sat up and turned their head toward the LEFT side of the image — toward the desk lamp — searching the room for something. We now see the left side of their face in three-quarter view; both pupils are pushed into the left corners of the eyes (image left), brows raised, tense and suspicious. Mirror image of a look to the right: the nose points to image LEFT. Keep everything else exactly the same and pixel-aligned: the camera, the framing, the background, the lighting, the colours and the oil-pastel brush texture. Same person, on-model. No text.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab49fe/FSqpchCy7q9pQb7k8cvZc_1789977583528.png"
+    ],
+    "image_size": {
+      "width": 2048,
+      "height": 1152
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c2fa-8958-7f73-aed8-e1bd71e9d501",
+  "files": [
+    "assets/frames/A-look-left.png"
+  ],
+  "ms": 95921
+}

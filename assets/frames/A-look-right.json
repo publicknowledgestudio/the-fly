@@ -1,0 +1,21 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "Edit the FIRST image. The person has sat up and turned their head to their left (towards the right side of the image), searching the room for something, pupils pushed to the corners of the eyes, brows raised, tense and suspicious. Keep everything else exactly the same and pixel-aligned: the camera, the framing, the background, the lighting, the colours and the oil-pastel brush texture. Same person, on-model. No text. The SECOND image is the character model sheet, for reference only.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab49ea/N7S9J6YJ9kD5qR4u6aJ4N_1789977388662.png",
+      "https://v3b.fal.media/files/b/0aab49ec/qtUewPoTFQH8uLSaPYpQq_1789977405657.png"
+    ],
+    "image_size": {
+      "width": 2048,
+      "height": 1152
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c2f7-e602-7081-8b92-6d34482d3d7d",
+  "files": [
+    "assets/frames/A-look-right.png"
+  ],
+  "ms": 110058
+}

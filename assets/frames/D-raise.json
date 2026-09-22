@@ -1,0 +1,21 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "Edit the FIRST image. The person has slowly raised their right hand high into the upper-right of the frame, open palm facing the camera, fingers together, very large because it is close to the lens — ready to strike. Their stare into the lens is unchanged. Keep everything else exactly the same and pixel-aligned: the camera, the framing, the background, the lighting, the colours and the oil-pastel brush texture. Same person, on-model. No text. The SECOND image is the character model sheet, for reference only.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab49fe/xyKU_9lVJcFmbW55JpnPQ_1789977579697.png",
+      "https://v3b.fal.media/files/b/0aab49ff/kUPzDK7H--TDbk8sCfNNS_1789977596607.png"
+    ],
+    "image_size": {
+      "width": 2048,
+      "height": 1152
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c2fb-359e-71f3-b008-67546f7b5d5f",
+  "files": [
+    "assets/frames/D-raise.png"
+  ],
+  "ms": 106524
+}

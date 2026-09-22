@@ -1,0 +1,20 @@
+{
+  "model": "openai/gpt-image-2/edit",
+  "input": {
+    "prompt": "Edit the FIRST image. Through the window, the outside is now deep NIGHT: a dark indigo sky with a thin crescent moon and a few small stars above dark tree silhouettes — while the room itself stays in bright afternoon sunlight, with the same light shape on the wall. Keep everything else exactly the same and pixel-aligned: the camera, the framing, the background, the lighting, the colours and the oil-pastel brush texture. Same person, on-model. No text.",
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0aab4fca/79XJkU9r1ALDbXV4fbIu-_1789992427770.png"
+    ],
+    "image_size": {
+      "width": 2048,
+      "height": 1152
+    },
+    "quality": "high",
+    "output_format": "png"
+  },
+  "requestId": "01a0c3dd-0f85-7b42-89ca-aa69a208cdb4",
+  "files": [
+    "assets/dream/A-bg-night.png"
+  ],
+  "ms": 207104
+}
